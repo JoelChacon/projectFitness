@@ -1,0 +1,33 @@
+<style>
+	.ccForm {
+		width: 500px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -250px;
+        text-align: center;
+	}
+	.ccButton {
+		width: 120px;
+		position:relative;
+		margin-left: 180px;
+	}
+	.ccInput {
+		width: 300px;
+		height: 40px;
+		font-size: 20px
+	}
+</style>
+<div class="ccForm">
+	<form ng-submit="addClient()">
+		<input class="ccInput" type="field" placeholder="name" ng-model="client.name"><br>
+		<input class="ccInput" type="field" placeholder="address" ng-model="client.address"><br>
+		<input class="ccInput" type="field" placeholder="height" ng-model="client.height"><br>
+		<input class="ccInput" type="field" placeholder="weight" ng-model="client.weight"><br>
+		<input class="ccInput" type="field" placeholder="BMI" ng-model="client.BMI"><br>
+		<input class="ccInput" type="field" placeholder="body Fat Percentage" ng-model="client.bodyFat"><br>
+		<input type="submit" value="add" class="btn btn-info btn-lg ccButton">
+	</form>
+</div>

@@ -1,0 +1,107 @@
+<div class="dashtitle title">
+    <h3 class="actvapp"><!-- <img src="../pics/bolt.png"> --><a href="#" style="text-decoration: none">ACTV<span class="app">APP</span></a></h3>
+     <button ui-sref="home" class="btn btn-primary btn-sm pull-right logOff">log off</button><br>
+  </div>
+  <!-- <div>
+    <a ui-sref="createClient" class="btn btn-info btn-lg top1">add client</a>
+  </div> -->
+  <!--PANELS-->
+  <!-- <div class="panel panel-default dashPanels dashmargin" ng-repeat="client in clients"> -->
+    <!-- Default panel contents -->
+    <!-- <div class="dashPanels dashColor"><h1>{{client.name}}</h1></div> -->
+    <!-- List group -->
+    <!-- <ul class="list-group dashPanels"> -->
+      <!-- <li class="list-group-item dashPanels"><h3>{{client.address}}</h3></li> -->
+      <!-- <li class="list-group-item dashPanels"><h3>{{client.body.height}}</h3></li> -->
+      <!-- <li class="list-group-item dashPanels"><h3>{{client.body.weight}}</h3></li> -->
+      <!-- <li class="list-group-item dashPanels"><h3>{{client.body.BMI}}</h3></li> -->
+      <!-- <li class="list-group-item dashPanels"><h3>{{client.body.bodyFatPercentage}}</h3></li> -->
+    <!-- </ul> -->
+  <!-- </div> -->
+ <!-- </div>  -->
+ <!-- <div class="row" ng-repeat="client in clients">
+  <div class col-md-6>{{client.name}}</div>
+   
+
+ </div> -->
+ <!-- col-sm-offset-1 text-center -->
+<div style="height: 130px; "></div>  
+  <!-- <button ng-model="myVar" ng-init="myVar = true" class="btn btn-primary btn-md">delete client</button> -->
+
+
+<!-- <div>Keep HTML:</div> <input type="checkbox" class="btn btn-primary btn-md" ng-model="myVar" ng-init="myVar = true"> -->
+
+<!-- <div ng-if="myVar">
+<h1>Welcome</h1><input type="checkbox">
+<p>Welcome to my home.</p><input type="checkbox">
+<hr>
+</div>
+ -->
+
+
+ <div class="container">
+  <div class="row">
+  <div class="col-sm-2 dashFind"><input type="text" placeholder="Find Client" ng-model="findFriend.name" class="dashInput"></div>
+   <div style="padding-bottom: 20px" class="col-sm-10 text-right pull-right">
+
+    <button ui-sref="createClient" class="btn btn-primary btn-lg">Add New Client</button><br>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Clients
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th class="text-center">Address</th>
+                  <th class="text-center">Height</th>
+                  <th class="text-center">Weight</th>
+                  <th class="text-right">BMI</th>
+                  <th class="text-center">bodyFatPercentage</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div style="padding-top:0;" class="positionList">
+            <div class="list-group">
+              <a ui-sref="clientProfile" ng-repeat="client in clients" class="list-group-item">
+                <div class="row">
+                  <div class="col-md-2">{{client.name}}</div>
+                  <div class="col-md-2">{{client.address}}</div>
+                  <div class="col-md-2">{{client.body.height}}</div>
+                  <div class="col-md-2">{{client.body.weight}}</div>
+                  <div class="col-md-2">{{client.body.BMI}}</div>
+                  <div class="col-md-2 dashDelete">{{client.body.bodyFatPercentage}}</div><button ng-click="areYouSure(client._id)">X</button>     
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <table ng-repeat="client in clients" style="width:100%" class="table table-striped"> -->
+<!--   <tr>
+    <td>Name</td>
+    <td><h1>-{{client.name}}</h1></td>
+    <td><h3>{{client.body.height}}</h3></td> 
+    <td><h3>{{client.body.weight}}</h3></td>
+    <td><h3>{{client.body.BMI}}</h3></td>
+    <td><h3>{{client.body.bodyFatPercentage}}</h3></td>
+  </tr>
+</table> -->
+ 
