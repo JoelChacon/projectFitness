@@ -21,9 +21,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url:'/clientProfile',
 			templateUrl: 'html/clientProfile.html'
 		})
-
-
-	
-
-
 });

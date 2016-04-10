@@ -1,5 +1,5 @@
-<div class="dashtitle title">
-    <h3 class="actvapp"><!-- <img src="../pics/bolt.png"> --><a href="#" style="text-decoration: none">ACTV<span class="app">APP</span></a></h3>
+<div class="dashtitle title" style="height: 120px">
+    <h3 class="actvapp"><a ui-sref="dashboard" style="text-decoration: none">ACTV<span class="app">APP</span></a></h3>
      <button ui-sref="home" class="btn btn-primary btn-sm pull-right logOff">log off</button><br>
   </div>
   <!-- <div>
@@ -77,13 +77,14 @@
             <div class="list-group">
               <a ui-sref="clientProfile" ng-repeat="client in clients" class="list-group-item">
                 <div class="row">
-                  <div class="col-md-2">{{client.name}}</div>
-                  <div class="col-md-2">{{client.address}}</div>
-                  <div class="col-md-2">{{client.body.height}}</div>
-                  <div class="col-md-2">{{client.body.weight}}</div>
-                  <div class="col-md-2">{{client.body.BMI}}</div>
-                  <div class="col-md-2 dashDelete">{{client.body.bodyFatPercentage}}</div><button ng-click="areYouSure(client._id)">X</button>     
+                  <div class="col-xs-2">{{client.name}}</div>
+                  <div class="col-xs-2">{{client.address}}</div>
+                  <div class="col-xs-2">{{client.body.height}}</div>
+                  <div class="col-xs-2">{{client.body.weight}}</div>
+                  <div class="col-xs-2">{{client.body.BMI}}</div>
+                  <div class="col-xs-2 dashDelete">{{client.body.bodyFatPercentage}}</div><button ng-click="areYouSure(client._id)">not your client?</button>     
                 </div>
+                
               </a>
             </div>
           </div>

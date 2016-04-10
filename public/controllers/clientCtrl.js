@@ -10,7 +10,7 @@ angular.module('actvApp').controller('clientCtrl', function($scope, service, $st
 	$scope.getClients = function() {
 		service.getClients().then(function(res) {
 			$scope.clients = res.data;
-			console.log($scope.clients);
+			// console.log($scope.clients);
 		})
 	}
 	$scope.getClients();
