@@ -36,6 +36,7 @@
 <p>Welcome to my home.</p><input type="checkbox">
 <hr>
 </div>
+ui-sref="createClient" 
  -->
 
 
@@ -43,8 +44,7 @@
   <div class="row">
   <div class="col-sm-2 dashFind"><input type="text" placeholder="Find Client" ng-model="findFriend.name" class="dashInput"></div>
    <div style="padding-bottom: 20px" class="col-sm-10 text-right pull-right">
-
-    <button ui-sref="createClient" class="btn btn-primary btn-lg">Add New Client</button><br>
+   <button class="btn btn-primary btn-lg" ng-click="openAdd()">Add New Client</button><br>
   </div>
 </div>
 <div class="row">
@@ -62,11 +62,11 @@
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th class="text-center">Address</th>
-                  <th class="text-center">Height</th>
-                  <th class="text-center">Weight</th>
-                  <th class="text-right">BMI</th>
-                  <th class="text-center">bodyFatPercentage</th>
+                  <!-- <th class="text-center">Address</th> -->
+                  <th class="text-left">Height</th>
+                  <th class="text-left">Weight</th>
+                  <th class="text-left">BMI</th>
+                  <th class="text-left">bodyFatPercentage</th>
                 </tr>
               </thead>
             </table>
@@ -75,16 +75,15 @@
         <div class="row">
           <div style="padding-top:0;" class="positionList">
             <div class="list-group">
-              <a ui-sref="clientProfile" ng-repeat="client in clients" class="list-group-item">
+              <a ng-click="openSee(client)" ng-repeat="client in clients | filter: findFriend.name" class="list-group-item">
                 <div class="row">
                   <div class="col-xs-2">{{client.name}}</div>
-                  <div class="col-xs-2">{{client.address}}</div>
+                  <!-- <div class="col-xs-2">{{client.address}}</div> -->
                   <div class="col-xs-2">{{client.body.height}}</div>
                   <div class="col-xs-2">{{client.body.weight}}</div>
                   <div class="col-xs-2">{{client.body.BMI}}</div>
-                  <div class="col-xs-2 dashDelete">{{client.body.bodyFatPercentage}}</div><button ng-click="areYouSure(client._id)">not your client?</button>     
+                  <div class="col-xs-2 dashDelete">{{client.body.bodyFatPercentage}} &nbsp <div class="deleteButton pull-right"><button ng-click="$event.stopPropagation(); areYouSure(client._id)" class="myButton">delete</button></div></div>     
                 </div>
-                
               </a>
             </div>
           </div>

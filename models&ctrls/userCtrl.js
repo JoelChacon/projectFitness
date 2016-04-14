@@ -1,4 +1,4 @@
-var Trainer = require('./trainer');
+var Trainer = require('./user');
 
 
 

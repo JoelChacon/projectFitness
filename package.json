@@ -15,7 +15,6 @@
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "gulp": "^3.9.1",
     "mongoose": "^4.4.10",
     "morgan": "^1.7.0"
   },

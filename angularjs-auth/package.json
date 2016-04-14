@@ -1,0 +1,22 @@
+{
+  "name": "angularjs-auth",
+  "version": "1.0.0",
+  "description": "projectFitnessAuth",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Joel Chacon",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-jwt": "0.0.9",
+    "angular-material": "^1.0.7",
+    "angular-messages": "^1.5.3",
+    "angular-storage": "0.0.15",
+    "angular-ui-router": "^0.2.18",
+    "auth0-angular": "^4.1.0"
+  }
+}

@@ -1,4 +1,4 @@
-angular.module('actvApp').controller('clientCtrl', function($scope, service, $state) {
+angular.module('actvApp').controller('clientCtrl', function($scope, service, $state, $uibModal) {
 
 	$scope.addClient = function() {
 		
@@ -10,7 +10,7 @@ angular.module('actvApp').controller('clientCtrl', function($scope, service, $st
 	$scope.getClients = function() {
 		service.getClients().then(function(res) {
 			$scope.clients = res.data;
-			// console.log($scope.clients);
+			console.log($scope.clients);
 		})
 	}
 	$scope.getClients();
@@ -26,29 +26,90 @@ angular.module('actvApp').controller('clientCtrl', function($scope, service, $st
 			$scope.deleteClient(id);
 		}
 	}
-	// $scope.myProfile = {
-	// 	name: "Joel Chacon",
-	// 	friends: [{name: 'Ryan'}, {name: 'Bryan'}, 
-	// 	{name: 'Sarah'}, {name: 'Zac'}, {name: 'Erin'}]
-	// };
-	// $scope.sortOptions = [{
-	// 	display: 'Ascending'
-	// 	, value: false
-	// },
-	// {
-	// 	display: 'Descending'
-	// 	, value: true
-	// }
-	// ];
+  //addModal
+	$scope.openAdd = function () {
+    var modalInstance = $uibModal.open({
+      animation: true,
+      templateUrl: 'html/addClientModal.html',
+      controller: 'ModalInstanceCtrl3',
+      size: 'lg'
+    });
+  };
+
+
+/////seeModal//////
+$scope.openSee = function (client) {
+    var modalInstance = $uibModal.open({
+      animation: true,
+      templateUrl: 'html/clientProfile.html',
+      controller: 'ModalInstanceCtrl2',
+      size: 'lg',
+      resolve: {
+      	clientData: client
+      }
+      
+    });
+  };
+
+
+	$scope.ok = function () {
+    $uibModalInstance.close();
+  };
+
+  $scope.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+
 })
 
+// Please note that $uibModalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+
+angular.module('actvApp').controller('ModalInstanceCtrl2', function ($scope, $uibModalInstance, $state, clientData) {
+
+	$scope.ok = function () {
+	$uibModalInstance.close();
+	};
+
+	$scope.cancel = function () {
+	$uibModalInstance.dismiss('cancel');
+	};
 
 
-// client._id
+	$scope.client = clientData;
+	console.log("client", $scope.client)
 
 
-	// $scope.addClient = function() {
-	// 	if()
-	// 	service.addClient($scope.client).then(function(res) {
-	// 		console.log(res);
-	// 	})
+});
+//add modal controller
+
+
+// Please note that $uibModalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+
+angular.module('actvApp').controller('ModalInstanceCtrl3', function ($scope, service,  $uibModalInstance, $state) {
+
+  $scope.addClient = function() {
+    console.log("adding")
+    service.addClient($scope.newClient).then(function(res) {
+      console.log(res);
+      $scope.newClient = {};
+	  $state.reload();     
+      $scope.cancel();
+    })
+   
+  }
+
+	$scope.ok = function () {
+	$uibModalInstance.close();
+	};
+
+	$scope.cancel = function () {
+	$uibModalInstance.dismiss('cancel');
+	};
+});
+
+
+
+
+

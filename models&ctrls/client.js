@@ -7,9 +7,12 @@ var client = new mongoose.Schema({
 	body: {
 		height: String,
 		weight: String,
-		BMI: Number,
-		bodyFatPercentage: Number
-	}
+		BMI: String,
+		bodyFatPercentage: String
+	},
+	email: String,
+	phone: String,
+	notes: { type: String, required: false }
 })
 
 module.exports = mongoose.model('Client', client )

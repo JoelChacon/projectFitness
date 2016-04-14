@@ -1,90 +1,62 @@
-<div class="dashtitle title" style="height: 120px">
-    <h3 class="actvapp"><a ui-sref="dashboard" style="text-decoration: none">ACTV<span class="app">APP</span></a></h3>
-     <button ui-sref="home" class="btn btn-primary btn-sm pull-right logOff">log off</button><br>
-  </div>
-<div class="container">
-      <div class="row">
-      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-           <A href="edit.html" >Edit Profile</A>
-
-        <A href="edit.html" >Logout</A>
-       <br>
-<p class=" text-info">May 05,2014,03:00 pm </p>
-      </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-   
-   
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Sheena Kristin A.Eschor</h3>
-            </div>
+  <div class="panel panel-info">
+            <!-- <div class="panel-heading">
+              <h3 class="panel-title">{{client.name}}</h3>
+            </div> -->
             <div class="panel-body">
+            <h3 class="pull-center">Client Profile</h3>
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                <div class="col-md-3 col-lg-3 " align="center"><div style="height: 50px"></div><a href="#"><img alt="User Pic" src="pics/upload-image.png" class="img-circle img-responsive"></a></div>
                 
-                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
-                  <dl>
-                    <dt>DEPARTMENT:</dt>
-                    <dd>Administrator</dd>
-                    <dt>HIRE DATE</dt>
-                    <dd>11/12/2013</dd>
-                    <dt>DATE OF BIRTH</dt>
-                       <dd>11/12/2013</dd>
-                    <dt>GENDER</dt>
-                    <dd>Male</dd>
-                  </dl>
-                </div>-->
+        
                 <div class=" col-md-9 col-lg-9 "> 
-                  <table class="table table-user-information">
-                    <tbody>
-                      <tr>
-                        <td>Department:</td>
-                        <td>Programming</td>
-                      </tr>
-                      <tr>
-                        <td>Hire date:</td>
-                        <td>06/23/2013</td>
-                      </tr>
-                      <tr>
-                        <td>Date of Birth</td>
-                        <td>01/24/1988</td>
-                      </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>Gender</td>
-                        <td>Male</td>
-                      </tr>
+                  <form ng-submit="addClient()">
+                    <table class="table table-user-information">
+                      <tbody>
                         <tr>
-                        <td>Home Address</td>
-                        <td>Metro Manila,Philippines</td>
+                          <td>Name:</td>
+                          <td><input type="text" ng-model="client.name"/></td>
+                        </tr>
+                        <tr>
+                          <td>Height:</td>
+                          <td><input type="text" ng-model="client.body.height"/></td>
+                        </tr>
+                        <tr>
+                          <td>Weight:</td>
+                          <td><input type="text" ng-model="client.body.weight"/></td>
+                        </tr>
+                        <tr>
+                          <td>BMI:</td>
+                          <td><input type="text" ng-model="client.body.BMI"/></td>
+                        </tr>
+                        <tr>
+                          <td>bodyFatPercentage:</td>
+                          <td><input type="text" ng-model="client.body.bodyFatPercentage"/></td>
+                        </tr>
+                         <tr>
+                          <td>Address:</td>
+                          <td><input type="text" ng-model="client.address"/></td>
+                        </tr>
+                        <tr>
+                          <td>Email</td>
+                          <td><input type="text" ng-model="client.email"/></td>
+                        </tr>
+                        <tr>
+                         <td>Phone Number</td>
+                         <td><input type="text" ng-model="client.phone"></td>
+                        </tr>
+                        <tr>
+                          <td>Exercise Notes</td>
+                          <td><textarea type="text" ng-model="client.notes" rows="5" ></textarea></td>
+                        </tr>
+
                       </tr>
-                      <tr>
-                        <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
-                      </tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                        </td>
-                           
-                      </tr>
-                     
+                      <!-- <input type="submit" value="add" class="btn btn-info btn-lg ccButton"> -->
                     </tbody>
                   </table>
-                  
-                  <a href="#" class="btn btn-primary">My Sales Performance</a>
-                  <a href="#" class="btn btn-primary">Team Sales Performance</a>
-                </div>
+                </form>
               </div>
             </div>
-                 <div class="panel-footer">
-                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
-                        <span class="pull-right">
-                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
-                        </span>
-                    </div>
-            
+            <div class="panel-footer"></div>
           </div>
         </div>
       </div>

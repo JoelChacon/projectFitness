@@ -5,7 +5,7 @@ var cors = require('cors');
 var session = require('express-session');
 var mongoose = require('mongoose');
 var morgan = require('morgan')
-var trainerCtrl = require('./models&ctrls/trainerCtrl.js');
+var trainerCtrl = require('./models&ctrls/userCtrl.js');
 var clientCtrl = require('./models&ctrls/clientCtrl.js');
 
 // var corsOrigin = {
@@ -35,7 +35,7 @@ app.delete('/api/client/:id', clientCtrl.delete);
 
 
  //connecting
-var port = 6674;
+var port = 6681;
 var mongoUri = 'mongodb://localhost:27017/projectFitness';
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {

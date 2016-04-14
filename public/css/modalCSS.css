@@ -7,13 +7,13 @@
 /****** LOGIN MODAL ******/
 #loginbutton:focus {
     border: none;
-    outline: none; 
+    outline: none;
 }
 #loginbutton:active {
     border: none;
-    outline: none; 
+    outline: none;
 }
-.modal-dialog div {
+.modal-dialog {
     height: 500px;
 }
 
@@ -30,8 +30,8 @@
   margin: 0 auto;
   border-radius: 2px;
   box-shadow: 5px 5px 5px rgba(0, 1, 1, 1);
-  overflow: hidden;
   font-family: roboto;
+  height: 500px;
 }
 
 .loginmodal-container, .modalH1 {
@@ -87,7 +87,7 @@
   /* border: 1px solid #3079ed; */
   border: 0px;
   color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  text-shadow: 0 1px rgba(0,0,0,0.1);
   background-color: #4d90fe;
   padding: 17px 0px;
   font-family: roboto;
@@ -111,12 +111,21 @@
   display: inline-block;
   opacity: 0.6;
   transition: opacity ease 0.5s;
-} 
+}
 
 .login-help{
   font-size: 12px;
   display: block;
+
+  position: relative;
+  top: 50px;
+  right:90px;
+  margin: 0 auto;
+  text-align: center;
 }
+/** {
+  border:solid 1px black;
+}*/
 .modalsignup {
     width:200px;
     background-color: #C9CED1;
@@ -127,7 +136,6 @@
     outline:none;
 }
 .modal-backdrop {
-    /*position: fixed;*/
     top: 0;
     right: 0;
     bottom: 0;
@@ -143,3 +151,9 @@
     left: 0;
     z-index: 1040;
     background-color: #000;
+  }
+    //////second////////
+.picUpload {
+    position: relative;
+    top: 50px;
+}

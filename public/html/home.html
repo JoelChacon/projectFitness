@@ -5,35 +5,11 @@
     <div class="title-main">
         <h1 class='title-train'>Train Smarter</h1>
         <h3>Track your clients. Sync your schedule.</h3>
-        <a href="#" id="loginbutton" type="button" class="btn btn-info btn-lg top1" data-toggle="modal" data-target="#login-modal">Login/Signup</a>
-
-        <a href="#learnMore" class="btn btn-info btn-lg top2">learn more</a>
+        <!-- <a href="#" id="loginbutton" type="button" class="btn btn-info btn-lg top1" data-toggle="modal" data-target="#login-modal">Login/Signup</a> -->
+        <button type="button" class="btn btn-info btn-lg top1" ng-click="open()">Login/Signup</button>
+        <a href="#learnMore" class="btn btn-info btn-lg top2">learn more</a><!--get this button to go to how it works-->
     </div>
 </header>
-<!--  modal modal modal modal modal -->
-<!-- <button type="button" data-toggle="modal" data-target="#login-modal">Launch modal</button> -->
-<!-- <button type=" button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login-modal">Login</button> -->
-<div class="modalbg">
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
-      <div class="modal-dialog">
-        <div class="loginmodal-container">
-            <h1 class=modalH1>Login to Your Account</h1><br>
-            <form>
-                <input type="text" name="user" placeholder="Username">
-                <input type="password" name="pass" placeholder="Password">
-                <input type="submit" ui-sref="dashboard" name="login" class="login loginmodal-submit" value="Login">
-                <button type="submit" class='modalsignup pull-left'>Signup</button>
-            </form>
-
-            <div class="login-help pull-left">
-                <a ui-sref="dashboard" >Register</a> - <a href="#">Forgot Password</a>
-            </div>
-
-        </div>
-    </div>
-</div>
-</div> 
-<!--  modal modal modal modal modal -->
 <section class="main">
     <!-- <a name="learnMore"></a> -->
     <h1  class="title-main-two">How It Works</h1>
@@ -45,7 +21,7 @@
                   <img src="/pics/track.png" alt="">
                     <br>
                     <h1 class="trackW">Track</h1>
-                    <h4>Track all your clients</h4>
+                    <h4>Track all your clients.</h4>
                     <h4>Found a new client? Simply</h4>
                     <h4>add them to your list</h4>
                 </div>
@@ -56,8 +32,8 @@
                     <img src="/pics/sync.png" alt="">
                     <br>
                     <h1 class="syncW">Sync</h1>
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <h4>No man, I don't eat pork</h4>
+                    <h4>Hold on to your butts</h4>
                 </div>
             </div>
             <div  class="row">
@@ -78,8 +54,8 @@
             <div class="col-xs-12">
                 <h1 class="text-center">Testimonials<br>
                     <div>
-                        <img src="/pics/testGirl.png">  
-                    </div>      
+                        <img src="/pics/testGirl.png">
+                    </div>
                 </h1>
                 <div class='centerTest'>
                     <div class="col-xs-1">
