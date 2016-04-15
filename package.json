@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+  "engines": {
+   "node": "5.0.0"
+ },
+ "scripts": {
+   "test": "echo \"Error: no test specified\" && exit 1",
+   "start": "NODE_ENV=production node server.js",
+ },
   "keywords": [
     "example",
     "heroku"
   ],
-  "author": "",
+  "author": "Joel Chacon",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
