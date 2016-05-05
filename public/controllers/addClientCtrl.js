@@ -29,7 +29,6 @@ $scope.open = function (client) {
 angular.module('actvApp').controller('ModalInstanceCtrl3', function ($scope, $uibModalInstance, $state, clientData) {
 
   $scope.addClient = function() {
-    
     service.addClient($scope.client).then(function(res) {
       console.log(res);
     })
@@ -46,10 +45,10 @@ angular.module('actvApp').controller('ModalInstanceCtrl3', function ($scope, $ui
 
 
 ////maybe not needed
-	$scope.goSomewhere = function(){
-		$state.go('dashboard')
-		$scope.ok();
-	}
+	// $scope.goSomewhere = function(){
+	// 	$state.go('dashboard')
+	// 	$scope.ok();
+	// }
 ////maybe not needed
 
 	$scope.client = clientData;
