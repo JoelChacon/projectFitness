@@ -36,7 +36,7 @@ app.delete('/api/client/:id', clientCtrl.delete);
 
  //connecting
 var port = process.env.PORT || 6683;
-var mongoUri = 'mongodb://localhost:27017/projectFitness';
+var mongoUri = 'mongodb://joelchacon:projectfitness@ds013162.mlab.com:13162/heroku_sf6dqssd');
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
     console.log('Connected to mongo at: ' + mongoUri);
