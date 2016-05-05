@@ -36,7 +36,7 @@ app.delete('/api/client/:id', clientCtrl.delete);
 
 
  //connecting
-var mongoUri = '  mongodb://joelchacon:projectfitness123@ds013182.mlab.com:13182/heroku_q9rhvrpt');
+var mongoUri = 'mongodb://joelchacon:projectfitness123@ds013182.mlab.com:13182/heroku_q9rhvrpt';
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
     console.log('Connected to mongo at: ' + mongoUri);
