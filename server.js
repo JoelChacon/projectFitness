@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var morgan = require('morgan')
 var trainerCtrl = require('./models&ctrls/userCtrl.js');
 var clientCtrl = require('./models&ctrls/clientCtrl.js');
+var port = process.env.PORT || 6683;
 
 // var corsOrigin = {
 // 	origin: "http://localhost:6670"
@@ -35,12 +36,11 @@ app.delete('/api/client/:id', clientCtrl.delete);
 
 
  //connecting
-var port = process.env.PORT || 6683;
 var mongoUri = 'mongodb://joelchaco:projectfitness123@ds013162.mlab.com:13162/heroku_sf6dqssd');
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
     console.log('Connected to mongo at: ' + mongoUri);
 })
-app.listen(port, function(port) {
-	console.log('I got an ear out for port ' + port)
+app.listen(port, function() {
+	console.log('I got an ear out for port ' + port);
 })
