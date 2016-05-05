@@ -41,6 +41,6 @@ mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
     console.log('Connected to mongo at: ' + mongoUri);
 })
-app.listen(port, function() {
+app.listen(port, function(port) {
 	console.log('I got an ear out for port ' + port)
 })
