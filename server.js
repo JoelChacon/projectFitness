@@ -30,7 +30,7 @@ app.put('/api/trainer', trainerCtrl.put);
 ////
 app.get('/api/clients', clientCtrl.getAll);
 app.get('/api/client', clientCtrl.getOne);
-app.post('/api/client', clientCtrl.post);//get this to work
+app.post('https://projectfitness.herokuapp.com/api/client', clientCtrl.post);//get this to work
 app.put('/api/client', clientCtrl.put);
 app.delete('/api/client/:id', clientCtrl.delete);
 
