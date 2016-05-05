@@ -44,10 +44,13 @@ angular.module('actvApp').controller('ModalInstanceCtrl3', function ($scope, $ui
 	$uibModalInstance.dismiss('cancel');
 	};
 
-	// $scope.goSomewhere = function(){
-	// 	$state.go('dashboard')
-	// 	$scope.ok();
-	// }
+
+////maybe not needed
+	$scope.goSomewhere = function(){
+		$state.go('dashboard')
+		$scope.ok();
+	}
+////maybe not needed
 
 	$scope.client = clientData;
 	console.log("client", $scope.client)
