@@ -2,7 +2,7 @@ app.service('service', function($http, $q) {
 	this.addClient = function(client) {
 		return $http({
 			method: "POST",
-			url: '/api/client',
+			url: 'https://projectfitness.herokuapp.com/api/client',
 			data: { 
 				name: client.name,
 				address: client.address,
@@ -23,7 +23,7 @@ app.service('service', function($http, $q) {
 		var dfd = $q.defer();
 		$http({
 			method:"GET",
-			url: '/api/clients'
+			url: 'https://projectfitness.herokuapp.com/api/client'
 		}).then(function(res) {
 			dfd.resolve(res)
 		})
@@ -33,7 +33,7 @@ app.service('service', function($http, $q) {
 	this.deleteClient = function(clientID) {
 		return $http({
 			method: "DELETE",
-			url: '/api/client/' + clientID
+			url: 'https://projectfitness.herokuapp.com/api/client' + clientID
 		})
 	}
 })

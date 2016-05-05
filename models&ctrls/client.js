@@ -12,7 +12,7 @@ var client = new mongoose.Schema({
 	},
 	email: String,
 	phone: String,
-	notes: { type: String, required: false }
+	notes: String
 })
 
 module.exports = mongoose.model('Client', client )
