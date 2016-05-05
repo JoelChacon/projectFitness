@@ -35,7 +35,7 @@ app.delete('/api/client/:id', clientCtrl.delete);
 
 
  //connecting
-var port = 6683;
+var port = process.env.PORT || 6683;
 var mongoUri = 'mongodb://localhost:27017/projectFitness';
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
