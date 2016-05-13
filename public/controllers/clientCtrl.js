@@ -92,7 +92,7 @@ angular.module('actvApp').controller('ModalInstanceCtrl3', function ($scope, ser
   $scope.addClient = function( newClient ) {
     // console.log("adding", res)
     service.addClient(newClient).then(function(res) {
-      console.log(res);
+      // console.log(res);
       $scope.newClient = {};
 	  $state.reload();     
       $scope.cancel();
