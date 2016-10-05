@@ -38,14 +38,14 @@
         <div class="row">
           <div style="padding-top:0;" class="positionList">
             <div class="list-group">
-              <a ng-click="openSee(client)" ng-repeat="client in clients | filter: findFriend.name" class="list-group-item">
+              <a ng-repeat="client in clients | filter: findFriend.name" ng-click="openSee(client)" class="list-group-item">
                 <div class="row">
                   <div class="col-xs-2">{{client.name}}</div>
                   <!-- <div class="col-xs-2">{{client.address}}</div> -->
                   <div class="col-xs-2">{{client.body.height}}</div>
                   <div class="col-xs-2">{{client.body.weight}}</div>
                   <div class="col-xs-2">{{client.body.BMI}}</div>
-                  <div class="col-xs-2 dashDelete">{{client.body.bodyFatPercentage}} &nbsp <div class="deleteButton pull-right"><button ng-click="$event.stopPropagation(); areYouSure(client._id)" class="myButton">delete</button></div></div>     
+                  <div class="col-xs-2 dashDelete">{{client.body.bodyFatPercentage}}<div class="deleteButton pull-right"><button ng-click="$event.stopPropagation(); are YouSure(client._id)" class="myButton">delete</button></div></div>     
                 </div>
               </a>
             </div>
